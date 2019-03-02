@@ -1,0 +1,49 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	cout << "Estimate of the price to clean small and large rooms" << endl;
+
+	int large_rooms{ 0 };
+	cout << "Please enter the number of large rooms" << endl;
+	cin >> large_rooms;
+
+	int small_rooms{ 0 };
+	cout << "Please enter the number of small rooms" << endl;
+	cin >> small_rooms;
+
+	const double price_per_smallrm{ 25.0 };
+	const double price_per_largerm{ 35.0 };
+
+	const double sales_taxes{ 0.06 };
+	const int est_expiry{ 30 }; //days
+
+
+
+	cout << "\nEstimate for cleaning" << endl;
+	cout << "Number of large rooms: " << large_rooms << endl;
+	cout << "Number of small rooms: " << small_rooms << endl;
+	cout << "Price per large rooms is $35.00" << endl;
+	cout << "Price per large rooms is $25.00" << endl;
+	cout << "Cost for large rooms : " << 35 * large_rooms << endl;
+	cout << "Cost for large rooms : " << 25 * large_rooms << endl;
+
+	cout << "Cost : $" << (35 * large_rooms) +
+		(25 * large_rooms)
+		<< endl;
+
+	cout << "Tax: $" << 0.06* ((35 * large_rooms) + (25 * large_rooms)) << endl;
+	cout << "===========================================" << endl;
+
+	cout << "Total estimate: $" << (35 * large_rooms) +
+		(25 * large_rooms) +
+		0.06* ((35 * large_rooms) + (25 * large_rooms))
+		<< endl;
+
+	cout << "This estimate is for " << 30 << " days" << endl;
+
+	return 0;
+
+}
