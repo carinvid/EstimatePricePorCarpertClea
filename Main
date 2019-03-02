@@ -1,0 +1,23 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	cout << "Please enter the numbers of room to be clean" << endl;
+
+	int num_rooms{ 0 };
+
+	cin >> num_rooms;
+
+	cout << "\nEstimate for carpet cleaning service" << endl;
+	cout << "Number of room:" << num_rooms << endl;
+	cout << "Price per romm: $30" << endl;
+	cout << "Cost: $ " << 30 * num_rooms << endl;
+	cout << "Tax: $   " << 30 * num_rooms * 0.06 << endl;
+	cout << "====================================" << endl;
+	cout << "Total: $" << (num_rooms * 30) + (0.06*num_rooms * 30) << endl;
+	cout << "This estimate is valid for 30 days" << endl;
+
+	return 0;
+}
